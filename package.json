@@ -1,6 +1,6 @@
 {
   "name": "atelier-storybook", 
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ma librairie de composants",
   "type": "module",
   "main": "dist/index.js",
