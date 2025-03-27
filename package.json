@@ -1,15 +1,20 @@
 {
-  "name": "atelier-storybook", 
+  "name": "@mon-org/atelier-storybook", 
   "version": "0.0.1",
   "description": "Ma librairie de composants",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
@@ -60,5 +65,15 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mon-org/atelier-storybook.git"
+  },
+  "author": "Ton Nom",
+  "license": "MIT"
 }
