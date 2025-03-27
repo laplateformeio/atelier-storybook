@@ -1,5 +1,5 @@
 {
-  "name": "laplateforme/atelier-storybook", 
+  "name": "@laplateforme/atelier-storybook", 
   "version": "0.0.1",
   "description": "Ma librairie de composants",
   "type": "module",
