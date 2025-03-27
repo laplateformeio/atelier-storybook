@@ -1,4 +1,3 @@
-import React from 'react';
 
 import './button.css';
 
@@ -12,7 +11,7 @@ export interface ButtonProps {
   /** Button contents */
   label: string;
   /** Button contents */
-  color: string;
+  color?: string;
   /** Optional click handler */
   onClick?: () => void;
 }
