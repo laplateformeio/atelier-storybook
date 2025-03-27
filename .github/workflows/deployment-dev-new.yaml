@@ -1,0 +1,38 @@
+name: Main Workflow
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_call:
+    outputs:
+      repo_name:
+        description: "API URL"
+        value: ${{ jobs.get-repo-name.outputs.repo_name }}
+      timestamp:
+        description: "API URL"
+        value: ${{ jobs.get-repo-name.outputs.timestamp }}
+jobs:
+  get-repo-name:
+    runs-on: ubuntu-latest
+    outputs:
+      repo_name: ${{ steps.get_name.outputs.repo_name }}
+      timestamp: ${{ steps.get_timestamp.outputs.timestamp }}
+    steps:
+      - name: get_name
+        id: get_name
+        run: |
+          echo "repo_name=$(basename ${{ github.repository }})" >> $GITHUB_OUTPUT
+      - name: get_timestamp
+        id: get_timestamp
+        run: |
+          echo "timestamp=$(date --utc +%FT%H-%M-%SZ)" >> $GITHUB_OUTPUT
+  run-build-job-front:
+    uses: laplateformeio/atelier-workflows/.github/workflows/workflow-build.yaml@main
+    needs: [get-repo-name]
+    with:
+      BUILD_FOLDER: ./
+      IMAGE_NAME: ${{ needs.get-repo-name.outputs.repo_name }}-front
+      TAG: dev-${{ needs.get-repo-name.outputs.timestamp }}
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}

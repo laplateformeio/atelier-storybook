@@ -1,0 +1,41 @@
+name: Main Workflow
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+  workflow_call:
+    outputs:
+      repo_name:
+        description: "API URL"
+        value: ${{ jobs.get-repo-name.outputs.repo_name }}
+      tag:
+        description: "TAG"
+        value: ${{ jobs.get-repo-name.outputs.tag }}
+jobs:
+  get-repo-name:
+    runs-on: ubuntu-latest
+    outputs:
+      repo_name: ${{ steps.get_name.outputs.repo_name }}
+      tag: ${{ steps.get_tag.outputs.tag }}
+    steps:
+        - name: get_name
+          id: get_name
+          run: |
+              echo "repo_name=$(basename ${{ github.repository }})" >> $GITHUB_OUTPUT
+        
+        - name: get_tag
+          id: get_tag
+          run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+        - name: print name and tag
+          run: |
+            echo "NAME ${{ steps.get_name.outputs.repo_name }}"
+            echo "TAG ${{ steps.get_tag.outputs.tag }}"  
+  run-build-job-front:
+    uses: laplateformeio/atelier-workflows/.github/workflows/workflow-build.yaml@main
+    needs: [get-repo-name]
+    with:
+      BUILD_FOLDER: ./
+      IMAGE_NAME: ${{ needs.get-repo-name.outputs.repo_name }}-front
+      TAG: ${{ needs.get-repo-name.outputs.tag }}-rc
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
