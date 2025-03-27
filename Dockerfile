@@ -13,9 +13,6 @@ RUN pnpm install
 
 RUN pnpm run build-storybook
 
-
-
-
 FROM nginx:alpine
 
 # COPY --from=builder /app/dist/ /usr/share/nginx/webapp
