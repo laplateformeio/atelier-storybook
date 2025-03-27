@@ -35,7 +35,7 @@ jobs:
     needs: [get-repo-name]
     with:
       BUILD_FOLDER: ./
-      IMAGE_NAME: ${{ needs.get-repo-name.outputs.repo_name }}-front
+      IMAGE_NAME: ${{ needs.get-repo-name.outputs.repo_name }}
       TAG: ${{ needs.get-repo-name.outputs.tag }}-rc
     secrets:
       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
