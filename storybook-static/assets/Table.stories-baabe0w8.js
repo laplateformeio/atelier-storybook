@@ -1,0 +1,35 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{r as n}from"./index-BCtMShv3.js";import{c as i,a as r,D as A,b as S,B as R,d as P,e as p}from"./dropdown-menu-CEFuX2r8.js";import"./index-CPlVzIAx.js";import"./index-D-fs5e6L.js";/**
+ * @license lucide-react v0.483.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const $=[["path",{d:"m3 16 4 4 4-4",key:"1co6wj"}],["path",{d:"M7 20V4",key:"1yoxec"}],["path",{d:"M11 4h10",key:"1w87gc"}],["path",{d:"M11 8h7",key:"djye34"}],["path",{d:"M11 12h4",key:"q8tih4"}]],E=i("ArrowDownWideNarrow",$);/**
+ * @license lucide-react v0.483.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const V=[["path",{d:"m3 8 4-4 4 4",key:"11wl7u"}],["path",{d:"M7 4v16",key:"1glfcx"}],["path",{d:"M11 12h10",key:"1438ji"}],["path",{d:"M11 16h7",key:"uosisv"}],["path",{d:"M11 20h4",key:"1krc32"}]],B=i("ArrowUpWideNarrow",V);/**
+ * @license lucide-react v0.483.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const D=[["circle",{cx:"12",cy:"12",r:"1",key:"41hilf"}],["circle",{cx:"12",cy:"5",r:"1",key:"gxeob9"}],["circle",{cx:"12",cy:"19",r:"1",key:"lyex9k"}]],H=i("EllipsisVertical",D);/**
+ * @license lucide-react v0.483.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const q=[["path",{d:"M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49",key:"ct8e1f"}],["path",{d:"M14.084 14.158a3 3 0 0 1-4.242-4.242",key:"151rxh"}],["path",{d:"M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143",key:"13bj9a"}],["path",{d:"m2 2 20 20",key:"1ooewy"}]],O=i("EyeOff",q),y=n.forwardRef(({className:s,...t},a)=>e.jsx("div",{className:"relative w-full overflow-auto",children:e.jsx("table",{ref:a,className:r("w-full caption-bottom text-sm",s),...t})}));y.displayName="Table";const h=n.forwardRef(({className:s,...t},a)=>e.jsx("thead",{ref:a,className:r("[&_tr]:border-b",s),...t}));h.displayName="TableHeader";const u=n.forwardRef(({className:s,...t},a)=>e.jsx("tbody",{ref:a,className:r("[&_tr:last-child]:border-0",s),...t}));u.displayName="TableBody";const _=n.forwardRef(({className:s,...t},a)=>e.jsx("tfoot",{ref:a,className:r("border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",s),...t}));_.displayName="TableFooter";const l=n.forwardRef(({className:s,...t},a)=>e.jsx("tr",{ref:a,className:r("border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",s),...t}));l.displayName="TableRow";const x=n.forwardRef(({className:s,...t},a)=>e.jsx("th",{ref:a,className:r("h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",s),...t}));x.displayName="TableHead";const b=n.forwardRef(({className:s,...t},a)=>e.jsx("td",{ref:a,className:r("p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",s),...t}));b.displayName="TableCell";const f=n.forwardRef(({className:s,...t},a)=>e.jsx("caption",{ref:a,className:r("mt-4 text-sm text-muted-foreground",s),...t}));f.displayName="TableCaption";y.__docgenInfo={description:"",methods:[],displayName:"Table"};h.__docgenInfo={description:"",methods:[],displayName:"TableHeader"};u.__docgenInfo={description:"",methods:[],displayName:"TableBody"};_.__docgenInfo={description:"",methods:[],displayName:"TableFooter"};x.__docgenInfo={description:"",methods:[],displayName:"TableHead"};l.__docgenInfo={description:"",methods:[],displayName:"TableRow"};b.__docgenInfo={description:"",methods:[],displayName:"TableCell"};f.__docgenInfo={description:"",methods:[],displayName:"TableCaption"};const M=({data:s,columns:t,legeng:a})=>e.jsxs(y,{children:[a&&e.jsx(f,{children:a}),e.jsx(h,{children:e.jsx(l,{className:"w-full overflow-scroll",children:t.map((o,m)=>e.jsx(x,{className:o.className,children:e.jsxs("span",{className:"flex items-center justify-between w-full",children:[o.name,e.jsxs(A,{children:[e.jsx(S,{asChild:!0,children:e.jsx(R,{color:"#cacaca",variant:"ghost",onClick:()=>console.log("clicked"),children:e.jsx(H,{color:"#cacaca"})})}),e.jsxs(P,{side:"top",className:"",children:[e.jsxs(p,{className:"flex items-baseline gap-2 whitespace-nowrap",onClick:()=>console.log("clicked, ascending"),children:[e.jsx(B,{}),e.jsxs("span",{children:["Sort by ",o.name," ascending"]})]}),e.jsxs(p,{onClick:()=>console.log("clicked, ascending"),children:[e.jsx(E,{}),e.jsxs("span",{children:["Sort by ",o.name," descending"]})]}),e.jsx("hr",{}),e.jsxs(p,{children:[e.jsx(O,{}),e.jsxs("span",{children:["Hide ",o.name," column"]})]})]})]})]})},m))})}),e.jsx(u,{children:s.map((o,m)=>e.jsx(l,{children:Object.keys(o).map((C,I)=>e.jsx(b,{children:String(o[C])},I))},m))})]});M.__docgenInfo={description:"",methods:[],displayName:"TableComponent",props:{columns:{required:!0,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{
+  name: string;
+  className?: string;
+}`,signature:{properties:[{key:"name",value:{name:"string",required:!0}},{key:"className",value:{name:"string",required:!1}}]}}],raw:`{
+  name: string;
+  className?: string;
+}[]`},description:""},data:{required:!0,tsType:{name:"Array",elements:[{name:"T"}],raw:"T[]"},description:""},legeng:{required:!1,tsType:{name:"string"},description:""}}};const v=[{invoice:"INV001",paymentStatus:"Paid",totalAmount:"$250.00",paymentMethod:"Credit Card"},{invoice:"INV002",paymentStatus:"Pending",totalAmount:"$150.00",paymentMethod:"PayPal"},{invoice:"INV003",paymentStatus:"Unpaid",totalAmount:"$350.00",paymentMethod:"Bank Transfer"},{invoice:"INV004",paymentStatus:"Paid",totalAmount:"$450.00",paymentMethod:"Credit Card"},{invoice:"INV005",paymentStatus:"Paid",totalAmount:"$550.00",paymentMethod:"PayPal"},{invoice:"INV006",paymentStatus:"Pending",totalAmount:"$200.00",paymentMethod:"Bank Transfer"},{invoice:"INV007",paymentStatus:"Unpaid",totalAmount:"$300.00",paymentMethod:"Credit Card"}],G={title:"Example/Table",component:M,tags:["autodocs"],parameters:{layout:"fullscreen"},args:{data:v,columns:[{name:"Invoice",className:"w-1/4 whitespace-nowrap"},{name:"Payment Status",className:"w-1/4 whitespace-nowrap"},{name:"Total Amount",className:"w-1/4 whitespace-nowrap"},{name:"Payment Method",className:"w-1/4 whitespace-nowrap"}]}},d={args:{data:v}},c={args:{data:[]}};var N,w,g;d.parameters={...d.parameters,docs:{...(N=d.parameters)==null?void 0:N.docs,source:{originalSource:`{
+  args: {
+    data: invoices
+  }
+}`,...(g=(w=d.parameters)==null?void 0:w.docs)==null?void 0:g.source}}};var j,T,k;c.parameters={...c.parameters,docs:{...(j=c.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    data: []
+  }
+}`,...(k=(T=c.parameters)==null?void 0:T.docs)==null?void 0:k.source}}};const J=["Table","TableEmpty"];export{d as Table,c as TableEmpty,J as __namedExportsOrder,G as default};
